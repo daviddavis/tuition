@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student: 
+  amount: 9.99
+  paid_at: 2012-03-03 11:32:47
+
+two:
+  student: 
+  amount: 9.99
+  paid_at: 2012-03-03 11:32:47

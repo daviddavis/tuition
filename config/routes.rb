@@ -1,4 +1,12 @@
 Tuition::Application.routes.draw do
+  resources :addresses
+
+  resources :courses
+
+  resources :payments
+
+  resources :students
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,4 @@
+rails generate scaffold student first_name last_name email phone
+rails generate scaffold payment student:references 'amount:decimal{7,2}' paid_at:datetime
+rails g scaffold course name 'credits:decimal{7,1}' start_date:date end_at:date
+rails g scaffold address student:references street city state zip

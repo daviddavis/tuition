@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  credits: 9.99
+  start_date: 2012-03-03
+  end_at: 2012-03-03
+
+two:
+  name: MyString
+  credits: 9.99
+  start_date: 2012-03-03
+  end_at: 2012-03-03
