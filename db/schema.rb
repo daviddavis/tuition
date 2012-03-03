@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303164124) do
+ActiveRecord::Schema.define(:version => 20120303190918) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "student_id"
@@ -32,7 +32,18 @@ ActiveRecord::Schema.define(:version => 20120303164124) do
     t.date     "end_at"
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
+    t.boolean  "active"
   end
+
+  create_table "enrollments", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "course_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "enrollments", ["course_id"], :name => "index_enrollments_on_course_id"
+  add_index "enrollments", ["student_id"], :name => "index_enrollments_on_student_id"
 
   create_table "payments", :force => true do |t|
     t.integer  "student_id"
@@ -51,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20120303164124) do
     t.string   "phone"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "active"
   end
 
 end

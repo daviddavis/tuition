@@ -1,4 +1,6 @@
 Tuition::Application.routes.draw do
+  resources :enrollments
+
   resources :addresses
 
   resources :courses
@@ -7,5 +9,5 @@ Tuition::Application.routes.draw do
 
   resources :students
 
-  root "students#index"
+  root to: "students#index"
 end
