@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
 */
+
+body, p, ol, ul, td  {
+  font-family: "Lucida Grande", Helvetica, Arial, Sans-serif;
+  font-size: 12pt;
+  line-height: 20px;
+}
+
+h1.logo {
+  text-decoration: underline;
+  font-size: 3.5em;
+  margin: 0.5em 0 0.6em;
+}
+h1, h2, h3, h4 {
+  margin: 0.8em 0; }
+
+div.container {
+  width: 950px;
+  margin: 0 auto; }
+
+table {
+  border-collapse: collapse;
+  width: 940px; }
+
+td, th {
+  padding: 2px 2px;
+  border: 1px solid #bfbfbf; }
