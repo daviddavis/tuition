@@ -14,5 +14,8 @@
   <%= yield %>
 </div>
 
+<div class="page-load">
+  Total Page Load Time: <%= Time.now - $timer %>s
+</div>
 </body>
 </html>
