@@ -1,4 +1,4 @@
-STUDENT_RECORDS = 500
+STUDENT_RECORDS = 800
 
 people = ["Philip Glass", "Friedrich Nietzsche", "H. L. Mencken", "Stephen Hawking", "Gandhi", "Francisco Goya",
   "Paul Gauguin", "Jan Pieterszoon Sweelinck", "Willem de Kooning", "Haskell Curry", "Albert Einstein", "Soren Kierkegaard",
