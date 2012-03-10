@@ -27,6 +27,12 @@ group :development, :test do
   gem 'rails-footnotes'
   gem 'rspec-rails'
   gem 'capybara'
+
+  # bash < <(curl -L https://raw.github.com/gist/1333785)
+  rvm_path = ENV['rvm_path']
+  gem 'linecache19','0.5.13'
+  gem 'ruby-debug-base19', '0.11.26'
+  gem 'ruby-debug19', '0.11.6',:require => 'ruby-debug'
 end
 
 # To use ActiveModel has_secure_password
