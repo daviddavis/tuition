@@ -8,7 +8,11 @@ class Student < ActiveRecord::Base
     courses.sum(&:credits)
   end
 
-  def balance_due
+  def calculated_balance_due
     credits * 521.90 - payments.sum(&:amount)
+  end
+
+  def update_balance_due
+    update_attribute(:balance_due, calculated_balance_due)
   end
 end
