@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s"
-    @students = Student.all
+    @students = Student.includes(:courses, :address).all
     logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s"
 
     respond_to do |format|
