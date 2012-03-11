@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120303190918) do
+ActiveRecord::Schema.define(:version => 20120311170730) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "student_id"
@@ -60,9 +60,10 @@ ActiveRecord::Schema.define(:version => 20120303190918) do
     t.string   "last_name"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.boolean  "active"
+    t.integer  "payments_count", :default => 0
   end
 
 end
