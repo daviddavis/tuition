@@ -9,6 +9,7 @@
     <th>Address</th>
     <th>Courses</th>
     <th>Credits</th>
+    <th>Payments</th>
     <th>Amount Due</th>
   </tr>
 
@@ -21,6 +22,7 @@
     <td><%= truncate(student.address.to_s, length: 20) %></td>
     <td><%= student.courses.select(&:active?).length %></td>
     <td><%= student.credits %></td>
+    <td><%= student.payments.count %></td>
     <td><%= number_to_currency(student.balance_due) %></td>
   </tr>
 <% end %>
