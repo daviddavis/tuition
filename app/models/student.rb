@@ -1,7 +1,7 @@
 class Student < ActiveRecord::Base
   has_one :address
   has_many :enrollments
-  has_many :courses, through: :enrollments, conditions: {active: true}
+  has_many :courses, through: :enrollments
   has_many :payments
 
   def credits
