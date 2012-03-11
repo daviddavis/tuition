@@ -11,14 +11,14 @@ describe "Students" do
       #load "#{Rails.root}/db/seeds.rb"
     end
 
-    it "takes less than 0.5 seconds" do
+    it "takes less than 1 second" do
       time = Time.now
       TRIALS.times do
         visit students_path
         page.should have_content(Student.last.email)
       end
       end_time = Time.now - time
-      (end_time / TRIALS).should < 0.5
+      (end_time / TRIALS).should < 1
     end
   end
 end
