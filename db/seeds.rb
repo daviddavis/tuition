@@ -1,5 +1,9 @@
 STUDENT_RECORDS = 800
 
+Course.delete_all
+Student.delete_all
+Payment.delete_all
+
 people = ["Philip Glass", "Friedrich Nietzsche", "H. L. Mencken", "Stephen Hawking", "Gandhi", "Francisco Goya",
   "Paul Gauguin", "Jan Pieterszoon Sweelinck", "Willem de Kooning", "Haskell Curry", "Albert Einstein", "Soren Kierkegaard",
   "Jean-Paul Sartre", "Andrew Wiles"]
@@ -28,6 +32,6 @@ STUDENT_RECORDS.times do
 
   payments = rand(5)
   payments.to_i.times do |i|
-    s.payments.create!(amount: s.balance_due / payments * (rand + 0.1), paid_at: rand(100).days.ago)
+    s.payments.create!(amount: s.credits * 521.90 / payments * (rand + 0.1), paid_at: rand(100).days.ago)
   end
 end
