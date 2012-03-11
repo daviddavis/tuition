@@ -1,3 +1,5 @@
+<% logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s" %>
+
 <h1>Student Report</h1>
 
 <table>
@@ -26,6 +28,7 @@
     <td><%= number_to_currency(student.balance_due) %></td>
   </tr>
 <% end %>
+<% logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s" %>
 </table>
 
 <br />
