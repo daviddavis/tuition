@@ -1,0 +1,25 @@
+- Get a baseline of how long the page takes.
+
+- Write some tests both for functionality and performance
+
+- Identify areas that are slow through profiling
+
+- Add pagination or remove unnecessary data
+
+- Add caching where possible
+	- Counter cache: http://railscasts.com/episodes/23-counter-cache-column
+	
+- Add eager loading
+
+- Use piggybacking. See http://railsexpress.de/blog/articles/2005/11/06/the-case-for-piggy-backed-attributes
+
+- Denormalize data in the database
+
+- Use smaller variables
+
+	- Use smaller strings (preferrably less than 23 characters if it's small). 
+		- See http://patshaughnessy.net/2012/1/4/never-create-ruby-strings-longer-than-23-characters
+		
+- Add conditions to associations
+
+- Convert arrays into hashes for faster lookups
