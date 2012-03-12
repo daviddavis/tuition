@@ -2,7 +2,9 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s"
+    @students = Student.include_student_report_data.all
+    logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s"
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,4 +1,5 @@
 <h1>Student Report</h1>
+<% logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s" %>
 
 <table>
   <tr>
@@ -12,6 +13,7 @@
     <th>Payments</th>
     <th>Amount Due</th>
   </tr>
+<% logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s" %>
 
 <% @students.each do |student| %>
   <tr>
@@ -19,13 +21,14 @@
     <td><%= student.last_name %></td>
     <td><%= student.email %></td>
     <td><%= student.phone %></td>
-    <td><%= truncate(student.address.to_s, length: 20) %></td>
-    <td><%= student.courses.select(&:active?).length %></td>
+    <td><%= truncate(student.report_address, length: 20) %></td>
+    <td><%= student.courses.select{|c| c.active?}.length %></td>
     <td><%= student.credits %></td>
-    <td><%= student.payments.count %></td>
+    <td><%= student.payments.size %></td>
     <td><%= number_to_currency(student.balance_due) %></td>
   </tr>
 <% end %>
+<% logger.debug "~~~ At #{__FILE__} #{__LINE__}: #{Time.now - $timer}s" %>
 </table>
 
 <br />

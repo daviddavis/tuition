@@ -18,6 +18,7 @@ describe "Students" do
         page.should have_content(Student.last.email)
       end
       end_time = Time.now - time
+      puts "Took #{end_time/TRIALS}"
       (end_time / TRIALS).should < 1
     end
   end
